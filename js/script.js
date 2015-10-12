@@ -9,10 +9,3 @@ $(function(){
   goQuiz();
 
 })
-
-
-
-
-
-
-

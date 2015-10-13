@@ -70,7 +70,7 @@ var Quiz = function() {
       option5: { type: "thinking",      point: 2 }
     },
     {
-      question: "Strict observance of the established rules is likely to prevent attaining a good outcome",
+      question: "Strict observance of the established rules prevents achieving a good outcome",
       option1: { type: "feeling",       point: 2 },
       option2: { type: "feeling",       point: 1 },
       option3: { type: "none",          point: 0 },
@@ -142,7 +142,7 @@ var Quiz = function() {
       option5: { type: "thinking",      point: 2 }
     },
      {
-      question: "You spend your leisure time actively socializing with a group of people, attending parties, shopping, etc.",
+      question: "You spend your leisure time actively socializing with a group of people.",
       option1: { type: "feeling",       point: 2 },
       option2: { type: "feeling",       point: 1 },
       option3: { type: "none",          point: 0 },
@@ -262,4 +262,8 @@ Quiz.prototype.questionPercentage = function(){
 
 Quiz.prototype.nextQuestion = function() {
   return this.questions[this.currentQuestion++];
+};
+
+Quiz.prototype.answer = function (){
+
 };

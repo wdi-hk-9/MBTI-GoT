@@ -14,13 +14,14 @@ $(function(){
   };
 
   var answer = function(event){
+    // calculate points function in quiz prototype
+
+    console.log(quiz.questions[quiz.currentQuestion][$(event.target).attr("value")]);
+
     // quiz.answer(event. )
     nextQuestion();
   };
 
-  $('#start-quiz').click(function(){
-    location.replace("./quiz.html")
-  })
   $('.btn-quiz').click(answer);
   nextQuestion();
 

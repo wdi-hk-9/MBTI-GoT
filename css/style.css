@@ -1,9 +1,30 @@
 .button-width {
-  width: 120px;
+  width: 80px;
   margin: 5px;
 }
 
 .question-size {
   font-size: 30px;
   font-family: 30px;
+}
+
+body {
+  background-image: url("../images/got-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.well {
+   background-color: rgba(245, 245, 245, 0.75);
+}
+
+#questions-full {
+  font-size: 140%
+}
+
+.well {
+  position: absolute;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%,-50%);
 }

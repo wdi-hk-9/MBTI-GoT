@@ -4,7 +4,7 @@ $(function(){
 
   var goQuiz = function(){
     $('#start-quiz').click(function(){
-    window.location = "./quiz.html";
+    location = "./quiz.html";
     })
   }
 
@@ -15,16 +15,16 @@ $(function(){
   }
 
   var progress = function(){
-    var currentQPercentage = (currentQuestion - 1) / 50 * 100
+    var currentQPercentage = currentQuestion / Object.keys(fullQuestions).length * 100
     $('.progress-bar').attr("style", "width:" + currentQPercentage + "%");
-    console.log("changing progress bar");
   };
 
-  var nextQuestion = $('.btn').click(function(){
+  var nextQuestion = $('.btn-choose').click(function(){
     currentQuestion += 1;
     var nextNum = currentQuestion;
     var nextQ = fullQuestions["q"+nextNum]["question"];
     $('#questions-full').html(nextQ);
+    $('.questionOutOf').html('Progress '+ currentQuestion + "/30");
     progress();
   })
 

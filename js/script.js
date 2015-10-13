@@ -9,6 +9,7 @@ $(function(){
   var nextQuestion = function() {
     var nextQ = quiz.nextQuestion();
     $('#questions-full').html(nextQ.question);
+    $('.questionOutOf').html('Progress ' + quiz.currentQuestion + '/30')
     updateProgress();
   };
 
@@ -17,7 +18,10 @@ $(function(){
     nextQuestion();
   };
 
-  $('.btn').click(answer);
+  $('#start-quiz').click(function(){
+    location.replace("./quiz.html")
+  })
+  $('.btn-quiz').click(answer);
   nextQuestion();
 
 });

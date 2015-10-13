@@ -30,6 +30,14 @@ var Quiz = function() {
       option5: { type: "thinking", point: 2 }
     },
     {
+      question: "You enjoy having a wide circle of acquaintances.",
+      option1: { type: "feeling",  point: 2 },
+      option2: { type: "feeling",  point: 1 },
+      option3: { type: "none",     point: 0 },
+      option4: { type: "thinking", point: 1 },
+      option5: { type: "thinking", point: 2 }
+    },
+    {
       question: "You feel involved when watching TV soaps",
       option1: { type: "feeling",       point: 2 },
       option2: { type: "feeling",       point: 1 },
@@ -249,7 +257,7 @@ var Quiz = function() {
 };
 
 Quiz.prototype.questionPercentage = function(){
-  return (this.currentQuestion - 1) / 50 * 100;
+  return (this.currentQuestion - 1) / 29 * 100;
 };
 
 Quiz.prototype.nextQuestion = function() {

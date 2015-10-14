@@ -17,10 +17,14 @@ body {
 
 .well {
    background-color: rgba(245, 245, 245, 0.75);
+   /*height: 550px*/
+   width: 550px;
 }
 
 #questions-full {
-  font-size: 140%
+  font-size: 190%;
+  height: 80px;
+  font-weight: bold;
 }
 
 .well {
@@ -28,4 +32,50 @@ body {
   top: 50%;
   left:50%;
   transform: translate(-50%,-50%);
+}
+
+.btn {
+    padding: 10px 15px;
+    border: 0 none;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+}
+
+#very-true {
+  text-transform: uppercase;
+}
+
+#very-false {
+  text-transform: uppercase;
+}
+
+#neutral {
+  text-transform: lowercase;
+}
+
+.btn:focus, .btn:active:focus, .btn.active:focus {
+    outline: 0 none;
+}
+
+.btn-primary {
+    background: #0099cc;
+    color: #ffffff;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+    background: #33a6cc;
+}
+
+.btn-primary:active, .btn-primary.active {
+    background: #007299;
+    box-shadow: none;
+}
+
+.btn-lg.round {
+    border-radius: 24px;
+}
+
+.btn-quiz {
+    width: 200px;
 }

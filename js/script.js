@@ -15,10 +15,20 @@ $(function(){
 
   var answer = function(event){
     // calculate points function in quiz prototype
-
-    console.log(quiz.questions[quiz.currentQuestion][$(event.target).attr("value")]);
-
     // quiz.answer(event. )
+    var chosenOption = $(event.target).attr("option-name");
+
+    var questionHash = quiz.questions[quiz.currentQuestion - 1];
+
+    var questionType = questionHash[chosenOption]["type"];
+
+    var questionPoint = questionHash[chosenOption]["point"];
+
+    quiz.totalScore[questionType] += questionPoint;
+
+    console.log("the points for " + questionType + " is " + quiz.totalScore[questionType]);
+
+
     nextQuestion();
   };
 
@@ -26,3 +36,4 @@ $(function(){
   nextQuestion();
 
 });
+

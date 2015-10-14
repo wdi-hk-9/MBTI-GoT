@@ -10,11 +10,12 @@ var Quiz = function() {
     feeling: 0,
     judging: 0,
     perceiving: 0,
+    none: 0
   };
 
   this.questions = [
     {
-      question: "You are almost never late for your appointments",
+      question: "You are almost never late for your appointments.",
       option1: { type: "feeling",  point: 2 },
       option2: { type: "feeling",  point: 1 },
       option3: { type: "none",     point: 0 },
@@ -23,19 +24,19 @@ var Quiz = function() {
     },
     {
       question: "You like to be engaged in an active and fast-paced job.",
-      option1: { type: "feeling",  point: 2 },
-      option2: { type: "feeling",  point: 1 },
+      option1: { type: "judging",  point: 2 },
+      option2: { type: "judging",  point: 1 },
       option3: { type: "none",     point: 0 },
-      option4: { type: "thinking", point: 1 },
-      option5: { type: "thinking", point: 2 }
+      option4: { type: "perceiving", point: 1 },
+      option5: { type: "perceiving", point: 2 }
     },
     {
       question: "You enjoy having a wide circle of acquaintances.",
-      option1: { type: "feeling",  point: 2 },
-      option2: { type: "feeling",  point: 1 },
+      option1: { type: "sensing",  point: 2 },
+      option2: { type: "sensing",  point: 1 },
       option3: { type: "none",     point: 0 },
-      option4: { type: "thinking", point: 1 },
-      option5: { type: "thinking", point: 2 }
+      option4: { type: "intuition", point: 1 },
+      option5: { type: "intuition", point: 2 }
     },
     {
       question: "You feel involved when watching TV soaps",
@@ -260,7 +261,7 @@ Quiz.prototype.questionPercentage = function(){
   return (this.currentQuestion - 1) / 29 * 100;
 };
 
-Quiz.prototype.nextQuestion = function() {
+Quiz.prototype.nextQuestion = function(){
   return this.questions[this.currentQuestion++];
 };
 

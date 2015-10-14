@@ -9,7 +9,7 @@ $(function(){
   var nextQuestion = function(){
     var nextQ = quiz.nextQuestion();
     $('#questions-full').html(nextQ.question);
-    $('.questionOutOf').html('Question ' + quiz.currentQuestion + '/30');
+    $('.questionOutOf').html('Question ' + quiz.currentQuestion + '/60');
     updateProgress();
   };
 
@@ -28,10 +28,11 @@ $(function(){
     resultPage();
   };
   var resultPage = function(){
-      if (quiz.currentQuestion === 31) {
+      if (quiz.currentQuestion === 61) {
       $('#quiz-1').hide();
       $('#result').show();
       var lettersResult = [];
+      var h1 = [];
       var extraversion = quiz.totalScore["extraversion"];
       var introversion = quiz.totalScore["introversion"];
       var sensing = quiz.totalScore["sensing"];
@@ -44,10 +45,12 @@ $(function(){
       if (introversion > extraversion){
         var percent = Math.floor((introversion / (introversion+extraversion) * 100))
         lettersResult.push("I");
+        h1.push("I:"+percent+"% ")
       }
       else if (extraversion > introversion) {
         var percent = Math.floor((extraversion / (extraversion+introversion) * 100))
         lettersResult.push("E");
+        h1.push("E:"+percent+"% ")
       }
       else {
           lettersResult.push("E");
@@ -56,10 +59,12 @@ $(function(){
       if (sensing > intuition){
         var percent = Math.floor((sensing / (sensing+intuition) * 100))
         lettersResult.push("S")
+        h1.push("S:"+percent+"% ")
       }
       else if (intuition > sensing){
         var percent = Math.floor((intuition / (intuition+sensing) * 100))
         lettersResult.push("N")
+        h1.push("N:"+percent+"% ")
       }
       else {
         lettersResult.push("S");
@@ -68,10 +73,12 @@ $(function(){
       if (thinking > feeling){
         var percent = Math.floor((thinking / (thinking+feeling) * 100))
         lettersResult.push("T")
+        h1.push("T:"+percent+"% ")
       }
       else if (feeling > thinking) {
         var percent = Math.floor((feeling / (feeling+thinking) * 100))
         lettersResult.push("F")
+        h1.push("F:"+percent+"% ")
       }
       else {
         lettersResult.push("F");
@@ -80,16 +87,22 @@ $(function(){
       if (perceiving > judging){
         var percent = Math.floor((perceiving / (perceiving+judging) * 100))
         lettersResult.push("P")
+        h1.push("P:"+percent+"% ")
       }
       else if (judging > perceiving) {
         var percent = Math.floor((judging / (judging+perceiving) * 100))
         lettersResult.push("J")
+        h1.push("J:"+percent+"% ")
       }
       else {
         lettersResult.push("J");
       };
 
       console.log(quiz.totalScore)
+      var h1Input = ""
+      h1Input += "<h1>" + "Your MBTI breakdown is: " + h1[0] + h1[1] + h1[2] + h1[3] + "</h1>"
+      $("h1").empty().append(h1Input)
+
       var html = ""
       html += "<article>" + lettersResult[0] + lettersResult[1] + lettersResult[2] + lettersResult[3] + "</article>"
       // console.log(html)

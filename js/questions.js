@@ -273,6 +273,6 @@ Quiz.prototype.nextQuestion = function(){
   return this.questions[this.currentQuestion++];
 };
 //what's prototype
-Quiz.prototype.answer = function (){
+Quiz.prototype.answer = function(){
 
 };

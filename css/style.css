@@ -79,3 +79,24 @@ body {
 .btn-quiz {
     width: 200px;
 }
+
+#result-string {
+  font-size: 250%;
+  font-weight: bold;
+}
+
+.nope {
+  position: absolute;
+  top: 50%;
+  left:50%;
+  height: 100vh;
+  transform: translate(-50%,-50%);
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.char-desc {
+  font-size: 120%;
+  font-weight: bold;
+}

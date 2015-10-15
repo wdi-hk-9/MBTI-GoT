@@ -18,7 +18,7 @@ html {
 .well {
   background-color: rgba(245, 245, 245, 0.75);
   /*height: 550px*/
-  width: 550px;
+  width: 600px;
 }
 
 #questions-full {
@@ -29,7 +29,7 @@ html {
 
 .well {
   position: absolute;
-  top: 50%;
+  top: 54%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -93,7 +93,7 @@ html {
 
 .nope {
   position: absolute;
-  top: 50%;
+  top: 54%;
   left: 50%;
   /*height: 95%*/;
   /*width: 80%;*/
@@ -130,4 +130,8 @@ html {
 .text-desc {
   font-weight: bold;
   color: black;
+}
+
+.text-center {
+  margin: 10px;
 }

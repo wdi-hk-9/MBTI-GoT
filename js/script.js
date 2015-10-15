@@ -92,7 +92,7 @@ $( function() {
 
       console.log( quiz.totalScore )
       var h1Input = ""
-      h1Input += "<h1>" + "Your MBTI breakdown is: " + h1[ 0 ] + h1[ 1 ] + h1[ 2 ] + h1[ 3 ] + "</h1>"
+      h1Input += "<h1>" + "Your MBTI breakdown is: " + "<br>" + h1[ 0 ] + h1[ 1 ] + h1[ 2 ] + h1[ 3 ] + "</h1>"
       $( "h1" ).empty().append( h1Input )
 
       var typeResult = ""

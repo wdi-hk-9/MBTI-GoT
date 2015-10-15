@@ -8,11 +8,11 @@
   font-family: 30px;
 }
 
-body {
-  height: 100vh;
+html {
+  /*height: 100vh;*/
   background-image: url("../images/got-background.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+/*  background-repeat: no-repeat;
+  background-size: cover;*/
 }
 
 .well {
@@ -95,17 +95,24 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  height: 95%;
-  width: 80%;
+  /*height: 95%*/;
+  /*width: 80%;*/
   transform: translate(-50%, -50%);
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+  margin-top: 10px;
 }
 
 .char-desc {
+  font-family: Impact, Haettenschweiler, 'Franklin Gothic Bold', Charcoal, 'Helvetica Inserat', 'Bitstream Vera Sans Bold', 'Arial Black', 'sans serif';
   font-size: 40px;
+  font-style: italic;
+  font-variant: small-caps;
   font-weight: bold;
+  line-height: 36px;
+  color: #1212C7;
+  height: 43px;
 }
 
 .char-img {
@@ -122,4 +129,5 @@ body {
 
 .text-desc {
   font-weight: bold;
+  color: black;
 }

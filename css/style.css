@@ -18,7 +18,7 @@ html {
 .well {
   background-color: rgba(245, 245, 245, 0.75);
   /*height: 550px*/
-  width: 550px;
+  width: 600px;
 }
 
 #questions-full {
@@ -130,4 +130,8 @@ html {
 .text-desc {
   font-weight: bold;
   color: black;
+}
+
+.text-center {
+  margin: 10px;
 }

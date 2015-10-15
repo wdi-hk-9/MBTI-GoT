@@ -109,8 +109,12 @@ $( function() {
     console.log(typeResult);
   }
 
+  var audio = new Audio('./audio/got-song.mp3');
+
+
   $( '#btn-reset' ).click( reset );
   $( '.btn-quiz' ).click( answer );
   nextQuestion();
+  audio.play();
 
 } );
